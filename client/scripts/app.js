@@ -104,11 +104,11 @@ app.handleUsernameClick = function(e){
 app.handleSubmit = function(e) {
   e.preventDefault();
 
-  var message = $("#message").val();
-  var roomname = $("#roomSelect").val();
+  var message = $('#message').val();
+  var roomname = $('#roomSelect').val();
   var username = window.location.search.split('=').pop();
 
-  if (roomname !== "") {
+  if (roomname !== '') {
 
     var toSend = {
       roomname: _.escape(roomname),
@@ -118,7 +118,7 @@ app.handleSubmit = function(e) {
 
     app.send(toSend);
 
-    $("#message").val('');
+    $('#message').val('');
   }
 
 };
